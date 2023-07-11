@@ -1,35 +1,72 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Run
 
-## Getting Started
+````
+npm run build
+````
 
-First, run the development server:
+And you get the following warnings:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+`````
+./node_modules/@walletconnect/keyvaluestorage/dist/cjs/node-js/db.js
+Module not found: Can't resolve 'lokijs' in '/Users/thorduragustsson/Programming/Projects/test_stellar_wallet/node_modules/@walletconnect/keyvaluestorage/dist/cjs/node-js'
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Import trace for requested module:
+./node_modules/@walletconnect/keyvaluestorage/dist/cjs/node-js/db.js
+./node_modules/@walletconnect/keyvaluestorage/dist/cjs/node-js/index.js
+./node_modules/@walletconnect/keyvaluestorage/dist/cjs/index.js
+./node_modules/@walletconnect/core/dist/index.cjs.js
+./node_modules/@walletconnect/sign-client/dist/index.cjs.js
+./node_modules/stellar-wallets-kit/build/main/lib/walletconnect.js
+./node_modules/stellar-wallets-kit/build/main/lib/stellar-wallets-kit.js
+./node_modules/stellar-wallets-kit/build/main/index.js
+./app/page.tsx
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+./node_modules/ws/lib/buffer-util.js
+Module not found: Can't resolve 'bufferutil' in '/Users/thorduragustsson/Programming/Projects/test_stellar_wallet/node_modules/ws/lib'
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Import trace for requested module:
+./node_modules/ws/lib/buffer-util.js
+./node_modules/ws/lib/websocket.js
+./node_modules/ws/index.js
+./node_modules/@walletconnect/jsonrpc-ws-connection/dist/cjs/utils.js
+./node_modules/@walletconnect/jsonrpc-ws-connection/dist/cjs/ws.js
+./node_modules/@walletconnect/jsonrpc-ws-connection/dist/cjs/index.js
+./node_modules/@walletconnect/core/dist/index.cjs.js
+./node_modules/@walletconnect/sign-client/dist/index.cjs.js
+./node_modules/stellar-wallets-kit/build/main/lib/walletconnect.js
+./node_modules/stellar-wallets-kit/build/main/lib/stellar-wallets-kit.js
+./node_modules/stellar-wallets-kit/build/main/index.js
+./app/page.tsx
 
-## Learn More
+./node_modules/ws/lib/validation.js
+Module not found: Can't resolve 'utf-8-validate' in '/Users/thorduragustsson/Programming/Projects/test_stellar_wallet/node_modules/ws/lib'
 
-To learn more about Next.js, take a look at the following resources:
+Import trace for requested module:
+./node_modules/ws/lib/validation.js
+./node_modules/ws/lib/receiver.js
+./node_modules/ws/index.js
+./node_modules/@walletconnect/jsonrpc-ws-connection/dist/cjs/utils.js
+./node_modules/@walletconnect/jsonrpc-ws-connection/dist/cjs/ws.js
+./node_modules/@walletconnect/jsonrpc-ws-connection/dist/cjs/index.js
+./node_modules/@walletconnect/core/dist/index.cjs.js
+./node_modules/@walletconnect/sign-client/dist/index.cjs.js
+./node_modules/stellar-wallets-kit/build/main/lib/walletconnect.js
+./node_modules/stellar-wallets-kit/build/main/lib/stellar-wallets-kit.js
+./node_modules/stellar-wallets-kit/build/main/index.js
+./app/page.tsx
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+./node_modules/pino/lib/tools.js
+Module not found: Can't resolve 'pino-pretty' in '/Users/thorduragustsson/Programming/Projects/test_stellar_wallet/node_modules/pino/lib'
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Import trace for requested module:
+./node_modules/pino/lib/tools.js
+./node_modules/pino/pino.js
+./node_modules/@walletconnect/logger/dist/cjs/index.js
+./node_modules/@walletconnect/sign-client/dist/index.cjs.js
+./node_modules/stellar-wallets-kit/build/main/lib/walletconnect.js
+./node_modules/stellar-wallets-kit/build/main/lib/stellar-wallets-kit.js
+./node_modules/stellar-wallets-kit/build/main/index.js
+./app/page.tsx
+`````
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# testStellarWallet
+Is that something that is fixable?
